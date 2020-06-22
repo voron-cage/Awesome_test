@@ -1,0 +1,26 @@
+{% extends 'image_uploads/base.html' %}
+{% load static %}
+
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'image_uploads/style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="content">
+    {% for photo in photos %}
+            <div class="content_block">
+                <a href="{% url 'image-detail' photo.name %}">
+                    {{ photo.image.url }}
+                </a>
+            </div>
+    {% endfor %}
+
+    <a href="{% url 'upload' %}">
+        <div class="upload">
+            ЗАГРУЗИТЬ
+        </div>
+    </a>
+    </div>
+{% endblock %}
