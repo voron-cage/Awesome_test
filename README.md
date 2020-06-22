@@ -15,11 +15,11 @@ SECRET_KEY="UNIQUE KEY"
 Перед запуском сервера примените все миграции. Приложение использует различные настройки для локального и боевого сервера.
 Так для локального сервера - Awesome_test.settings.local, а для боевого - Awesome_test.settings.production
 ```
-python manage.py migrate --Awesome_test.settings.local
+python manage.py migrate --settings=Awesome_test.settings.local
 ```
 Запустите приложение командой:
 ```
-python manage.py runserver --settings=Awesome_Test.settings.local
+python manage.py runserver --settings=Awesome_test.settings.local
 ```
 Перейдите по адресу:
 ```
